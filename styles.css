@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a1c4fd, #ffb1cc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.game-mode {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.game-mode button {
+    background: #ff7e5f;
+    color: rgb(24, 1, 1);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.game-mode button:hover {
+    background: #feb47b;
+    transform: scale(1.05);
+}
+
+#game-area {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#options button {
+    background: #ecf0f1;
+    border: 2px solid #dfe6e9;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#options button:hover {
+    background: #dfe6e9;
+    transform: translateX(5px);
+}
+
+#fill-input {
+    padding: 15px;
+    margin: 15px 0;
+    width: 100%;
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#fill-input:focus {
+    border-color: #ff7e5f;
+}
+
+button {
+    background: #0984e3;
+    color: rgb(15, 0, 0);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #74b9ff;
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+#result.correct {
+    background: #00b894;
+    color: rgb(22, 2, 2);
+}
+
+#result.wrong {
+    background: #d63031;
+    color: rgb(29, 1, 1);
+}   
+
+/* Responsive cho điện thoại */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .game-mode button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #options button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #fill-input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}

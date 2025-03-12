@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Ôn Tập Từ Vựng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Ôn Tập Từ Vựng Anh - Việt</h1>
+        <div class="game-mode">
+            <button onclick="startGame('engToViet')">Tiếng Anh → Tiếng Việt</button>
+            <button onclick="startGame('vietToEng')">Tiếng Việt → Tiếng Anh</button>
+            <button onclick="startGame('fillBlank')">Điền vào chỗ trống</button>
+        </div>
+
+        <div id="game-area" style="display: none;">
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <input type="text" id="fill-input" style="display: none;" placeholder="Nhập đáp án...">
+            <button onclick="checkAnswer()">Kiểm tra</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
