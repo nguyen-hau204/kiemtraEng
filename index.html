@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Ôn Tập Từ Vựng</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+        <div class="score-board">
+            <span>Điểm: </span><span id="score">0</span>
+        </div>
         <h1>Game Ôn Tập Từ Vựng Anh - Việt</h1>
         <div class="game-mode">
             <button onclick="startGame('engToViet')">Tiếng Anh → Tiếng Việt</button>
@@ -19,8 +23,9 @@
             <h2 id="question"></h2>
             <div id="options"></div>
             <input type="text" id="fill-input" style="display: none;" placeholder="Nhập đáp án...">
-            <button onclick="checkAnswer()">Kiểm tra</button>
+            <button id="check-button" onclick="checkAnswer()">Kiểm tra</button>
             <p id="result"></p>
+            <button id="restart-button" onclick="resetGame()" style="display: none;">Chơi lại</button>
         </div>
     </div>
     <script src="script.js"></script>
